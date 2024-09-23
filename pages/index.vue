@@ -144,12 +144,12 @@ onMounted(()=> {
 
                 if (previousTimeStamp !== timestamp) {
                     // Math.min()은 여기서 요소가 정확히 200px에 멈추는지 확인하기 위해 사용됩니다
-                    const count = Math.min(elapsed, 450);
+                    const count = Math.min(elapsed, 610);
                     element.style.left = `${parseInt(element.style.left) - 10}px`;
-                    if (count >= 310) done = true;
+                    if (count >= 610) done = true;
                 }
 
-                if (elapsed < 310) {
+                if (elapsed < 610) {
                     // 2초 이후에 애니메이션 종료
                     previousTimeStamp = timestamp;
                     if (!done) {
