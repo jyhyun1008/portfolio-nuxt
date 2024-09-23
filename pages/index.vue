@@ -127,6 +127,46 @@ onMounted(()=> {
             }
         }
     });
+
+
+    const element = document.querySelector(".overflow-width");
+
+    document.querySelector('#content-scroll').addEventListener('click',function(e){
+        if (parseInt(element.style.left) > -1700 && parseInt(element.style.left) <= 0) {
+            e.stopPropagation();
+            let start, previousTimeStamp;
+            let done = false;
+            function step(timestamp) {
+                if (start === undefined) {
+                    start = timestamp;
+                }
+                const elapsed = timestamp - start;
+
+                if (previousTimeStamp !== timestamp) {
+                    // Math.min()은 여기서 요소가 정확히 200px에 멈추는지 확인하기 위해 사용됩니다
+                    const count = Math.min(elapsed, 450);
+                    element.style.left = `${parseInt(element.style.left) - 10}px`;
+                    if (count >= 310) done = true;
+                }
+
+                if (elapsed < 310) {
+                    // 2초 이후에 애니메이션 종료
+                    previousTimeStamp = timestamp;
+                    if (!done) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        start = undefined
+                        previousTimeStamp = undefined;
+                    }
+                }
+            }
+            window.requestAnimationFrame(step);
+        } else {
+            e.stopPropagation();
+            document.querySelector('.overflow-width').style.top=`0%`;
+            document.querySelector('.overflow-width').style.left = `0`;
+        }
+    });
 })
 </script>
 
