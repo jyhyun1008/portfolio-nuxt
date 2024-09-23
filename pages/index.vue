@@ -102,9 +102,34 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
+import {onMounted} from 'vue';
+
+onMounted(()=> {
+
+    document.querySelector('.overflow-width').style.left=`0`;
+    document.querySelector('#content-scroll').addEventListener('wheel',function(e){
+        if(e.deltaY > 0){
+            if (parseInt(document.querySelector('.overflow-width').style.left) > -1800) {
+                e.preventDefault();
+                e.stopPropagation();
+                document.querySelector('.overflow-width').style.top=`0%`;
+                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) - 15}px`;
+            }
+        } if (e.deltaY < 0) {
+            if (parseInt(document.querySelector('.overflow-width').style.left) < 0) {
+                e.preventDefault();
+                e.stopPropagation();
+                document.querySelector('.overflow-width').style.top=`0%`;
+                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) + 15}px`;
+            }
+        }
+    });
+})
 </script>
+
 <style scoped>
 
 #content0 {
@@ -308,30 +333,3 @@
 }
 
 </style>
-
-<script setup>
-
-import {onMounted} from 'Vue';
-
-onMounted(()=> {
-
-    document.querySelector('.overflow-width').style.left=`0`;
-    document.querySelector('#content-scroll').addEventListener('wheel',function(e){
-        if(e.deltaY > 0){
-            if (parseInt(document.querySelector('.overflow-width').style.left) > -1800) {
-                e.preventDefault();
-                e.stopPropagation();
-                document.querySelector('.overflow-width').style.top=`0%`;
-                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) - 15}px`;
-            }
-        } if (e.deltaY < 0) {
-            if (parseInt(document.querySelector('.overflow-width').style.left) < 0) {
-                e.preventDefault();
-                e.stopPropagation();
-                document.querySelector('.overflow-width').style.top=`0%`;
-                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) + 15}px`;
-            }
-        }
-    });
-})
-</script>
