@@ -143,14 +143,14 @@ onMounted(()=> {
                 e.preventDefault();
                 e.stopPropagation();
                 document.querySelector('.overflow-width').style.top=`0%`;
-                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) - 15}px`;
+                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) - 30}px`;
             }
         } if (deltaY < 0) {
             if (parseInt(document.querySelector('.overflow-width').style.left) < 0) {
                 e.preventDefault();
                 e.stopPropagation();
                 document.querySelector('.overflow-width').style.top=`0%`;
-                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) + 15}px`;
+                document.querySelector('.overflow-width').style.left = `${parseInt(document.querySelector('.overflow-width').style.left) + 30}px`;
             }
         }
     });
