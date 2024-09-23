@@ -80,7 +80,7 @@
                             <li class="list-items"><div>
                                 <h2>피치타르트(Peacht.ART)</h2>
                                 <img src="https://for.stella.place/D1/6942bdf9-b1f7-4068-b668-05ec97d4603a.webp">
-                                <p>서브컬쳐 유저들에게 친화적인 페디버스 소프트웨어, 미스키(Misskey) 인스턴스를 운영하고 있습니다.</p>
+                                <p>서브컬쳐 유저들에게 친화적인 페디버스 소프트웨어, 미스키(Misskey)를 포크하여 인스턴스를 운영하고 있습니다.</p>
                                 <p>추가로 몇 가지 기능을 수정해서 배포하고 있습니다.</p>
                                 <span><a href="https://peacht.art">Website</a></span> <span><a href="">Github</a></span> <span><a href="">Docs</a></span></div>
                             </li>
