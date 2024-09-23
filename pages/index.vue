@@ -133,10 +133,11 @@ onMounted(()=> {
     function touchstart(e) {
         startY = e.touches[0].clientY;
     }
-    
+
     document.querySelector('#content-scroll').addEventListener('touchmove',function(e){
 
-        var deltaY = e.touches[0].clientY - startY;
+        var deltaY = startY - e.touches[0].clientY ;
+        console.log(deltaY)
         if(deltaY > 0){
             if (parseInt(document.querySelector('.overflow-width').style.left) > -1800) {
                 e.preventDefault();
