@@ -20,7 +20,7 @@
                 <h1>스킬.</h1>
                 <ul>
                     <li><strong>HTML, CSS, JavaScript</strong></li>
-                    <li><strong>Vue</strong>, Nuxt, React</li>
+                    <li><strong>Vue, Nuxt</strong>, React</li>
                     <li>Node.js, git, linux</li>
                 </ul>
             </div>
@@ -66,10 +66,9 @@
                             </li>
                             <li class="list-items"><div>
                                 <h2>캐비닛키(Cabinetkey)</h2>
-                                <img src="https://peachtart2.s3.amazonaws.com/tart/55382250-53be-4d14-b0b3-8ea0e3db1219.webp">
-                                <p>사진 업데이트 필요</p>
-                                <p>바닐라 JS 및 Misskey API를 이용하여, Misskey 계정에서 창작 세계관 및 캐릭터 정보를 정리할 수 있도록 돕는 프로그램입니다.</p>
-                                <span><a href="https://page.peacht.art/CabinetKey">Demo</a></span> <span><a href="https://github.com/jyhyun1008/CabinetKey">Github</a></span></div>
+                                <img src="https://peachtart2.s3.amazonaws.com/tart/3f7b34fe-2d5e-4650-a5aa-087da88a6594.webp">
+                                <p>창작 세계관 및 캐릭터 정보를 정리할 수 있도록 돕는 프로그램입니다. Nuxt 3로 제작했으며, Misskey 계정으로 로그인할 수 있도록 했습니다.</p>
+                                <span><a href="https://cabinet.peacht.arty">Demo</a></span> <span><a href="https://github.com/jyhyun1008/cabinetKey-nuxt">Github</a></span></div>
                             </li>
                             <li class="list-items"><div>
                                 <h2>파이(Pi-Chan)</h2>
